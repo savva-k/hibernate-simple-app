@@ -23,7 +23,6 @@ public class App
         Session session = HibernateUtils.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         session.save(employee);
-        session.
         session.getTransaction().commit();
         System.out.println(employee);
         HibernateUtils.getSessionFactory().close();
