@@ -1,7 +1,7 @@
 package com.imsavva.hibernatetestapp.entities;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.util.Calendar;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -34,7 +34,7 @@ public class Employee implements Serializable {
     private String surname;
 
     @Column(name = "ADDED_AT", nullable = false)
-    private Date addedAt;
+    private Calendar addedAt;
 
     public long getId() {
         return id;
@@ -60,11 +60,11 @@ public class Employee implements Serializable {
         this.surname = surname;
     }
 
-    public Date getAddedAt() {
+    public Calendar getAddedAt() {
         return addedAt;
     }
 
-    public void setAddedAt(Date date) {
+    public void setAddedAt(Calendar date) {
         this.addedAt = date;
     }
 
